@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "trigger": "webhook",
+  "steps": [
+    {
+      "id": "log",
+      "type": "log",
+      "message": "Webhook received"
+    }
+  ]
+}
