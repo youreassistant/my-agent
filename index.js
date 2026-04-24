@@ -1,13 +1,13 @@
-{
-  "name": "my-agent",
-  "version": "1.0.0",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "node-fetch": "^3.3.2"
-  }
-}
+import express from "express";
+
+const app = express();
+app.use(express.json());
+
+app.post("/", async (req, res) => {
+  console.log("Webhook received:", req.body);
+  res.json({ reply: "Agent läuft erfolgreich auf Railway!" });
+});
+
+app.listen(3000, () => {
+  console.log("Server läuft auf Port 3000");
+});
