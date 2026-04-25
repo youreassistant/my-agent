@@ -9,5 +9,5 @@ app.post("/", async (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log("Server läuft auf Port 3000");
+  console.log("Server läuft auf Port", process.env.PORT || 3000);
 });
