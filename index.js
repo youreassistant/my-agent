@@ -8,8 +8,8 @@ app.get("/", (req, res) => {
   res.send("Agent läuft!");
 });
 
-// POST Route für deinen Agent
-app.post("/", async (req, res) => {
+// POST Route für deinen Agent (RICHTIG!)
+app.post("/webhook/friseur-agent", async (req, res) => {
   console.log("Webhook received:", req.body);
   res.json({ reply: "Agent läuft erfolgreich auf Railway!" });
 });
